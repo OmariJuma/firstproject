@@ -1,0 +1,86 @@
+# learningDjango👨‍🚒
+This what you will need in order to understand how to setup and run a django app
+Execute this two lines whenever you change something in the models.py
+for initializing a migration -> python manage.py makemigration
+for executing the migration -> python manage.py migrate
+------
+To run a Django web application, you'll need to follow these steps:
+
+**Create a Virtual Environment :**
+It's a good practice to create a virtual environment for your Django project to manage dependencies. This isolates your project's Python environment from the system-wide Python installation. To create a virtual environment, open your terminal and run:
+
+python -m venv venv
+**Activate the virtual environment:**
+
+On Windows:
+
+bash
+Copy code
+venv\Scripts\activate
+On macOS and Linux:
+
+source venv/bin/activate
+Install Django:
+If you haven't already installed Django in your virtual environment, you can do so using pip. Run the following command:
+
+bash
+Copy code
+pip install django
+Create a Django Project:
+You can create a new Django project using the following command. Replace projectname with your desired project name:
+
+bash
+Copy code
+django-admin startproject projectname
+Navigate to Your Project Directory:
+Change your working directory to the newly created project directory:
+
+bash
+Copy code
+cd projectname
+Create a Django App (Optional):
+Django projects are made up of one or more apps. You can create an app using the following command. Replace appname with your desired app name:
+
+bash
+Copy code
+python manage.py startapp appname
+To include the app in your project, add it to the INSTALLED_APPS list in your project's settings.py file.
+
+**Apply Migrations:**
+Django uses database migrations to manage the database schema. Run the following commands to create the initial database schema:
+
+bash
+Copy code
+python manage.py makemigrations
+python manage.py migrate
+Create a Superuser (Optional):
+If you want to use the Django admin interface, create a superuser account to manage your site:
+
+bash
+Copy code
+python manage.py createsuperuser
+Follow the prompts to set a username, email, and password.
+
+**Run the Development Server:**
+To start the Django development server, run:
+
+bash
+Copy code
+python manage.py runserver
+By default, it runs on http://127.0.0.1:8000/. You can access your Django project in a web browser.
+
+Access the Admin Interface (Optional):
+If you created a superuser, you can access the Django admin interface at http://127.0.0.1:8000/admin/. Log in with the superuser credentials to manage your data.
+
+**Develop Your Application:**
+Now, you can start developing your Django application by defining models, views, templates, and URL patterns. Refer to the Django documentation for detailed guidance on building your application.
+
+**Stop the Development Server:**
+To stop the development server, press Ctrl+C in the terminal.
+
+**Deactivate the Virtual Environment (Optional):**
+If you created a virtual environment, you can deactivate it when you're done working on your project:
+
+bash
+Copy code
+deactivate
