@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% block content %} {% with num=1 %}
+<h1>Contact page: Here is my contact 📞 from the templates file</h1>
+{% if num >= 2 %}
+<p>hi</p>
+{% else %}
+<p>eat</p>
+<p>code</p>
+<p>sleep</p>
+
+{% endif %} {% endwith %} {% endblock content %}
